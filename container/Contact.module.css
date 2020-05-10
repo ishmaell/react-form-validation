@@ -1,0 +1,13 @@
+.Container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Content {
+  padding: 32px;
+}
+
+.Content h3 {
+  margin-bottom: 32px;
+}

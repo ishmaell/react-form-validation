@@ -1,0 +1,59 @@
+.FormGroup {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.FormGroup label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.FormGroup input[type="text"],
+.FormGroup input[type="date"],
+.FormGroup select,
+.FormGroup textarea {
+  background: #f5f5f5;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  padding: 8px 16px;
+  height: 45px;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+}
+
+.FormGroup .InputError {
+  border-color: #ff4136 !important;
+  background-color: #fffffe !important;
+}
+
+.FormGroup p {
+  color: #ff4136;
+  margin: 8px 0;
+}
+
+.FormGroup textarea {
+  min-height: 100px;
+  padding: 16px;
+}
+
+.FormGroup .RadioContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.FormGroup .RadioContainer .Radio {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.FormGroup .RadioContainer label {
+  font-weight: normal;
+  font-family: inherit;
+  margin: -2px 0 0 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
