@@ -113,7 +113,6 @@ class Contact extends React.Component {
   };
 
   changeHandler = (e, elem) => {
-    console.log("Targeted", e.target.value);
     let contactForm = { ...this.state.contactForm }; // clone a copy of the contactForm state
 
     let inputElem = { ...contactForm[elem] }; // clone a copy of the targeted input element from the contactForm
@@ -142,6 +141,7 @@ class Contact extends React.Component {
   };
 
   handleSubmit = e => {
+    alert(this.state);
     e.preventDefault();
 
     this.setState({ loading: true });
@@ -153,7 +153,7 @@ class Contact extends React.Component {
 
     axios
       .post("/customer.json", formData)
-      .then(response => {
+      .then(() => {
         this.setState({ loading: false });
         let copiedContactForm = Object.assign({}, this.state.contactForm);
         for (let key in copiedContactForm) {
@@ -162,7 +162,7 @@ class Contact extends React.Component {
 
         this.setState({ contactForm: copiedContactForm });
       })
-      .catch(error => {
+      .catch(() => {
         this.setState({ loading: false });
       });
   };
@@ -199,7 +199,7 @@ class Contact extends React.Component {
             <Button
               disabled={!this.state.formIsValid}
               type="button"
-              onClick={this.handleSubmit}
+              clicked={this.handleSubmit}
             >
               {this.state.loading ? <Spinner /> : "Send"}
             </Button>
